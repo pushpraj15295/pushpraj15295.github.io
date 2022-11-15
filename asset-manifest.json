@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.890aef43.css",
-    "main.js": "/static/js/main.82a3aefc.js",
+    "main.js": "/static/js/main.5a9b3828.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Pushpraj_Patel_Resume.pdf": "/static/media/Pushpraj_Patel_Resume.7c94d5d4df26e355a227.pdf",
     "index.html": "/index.html",
     "main.890aef43.css.map": "/static/css/main.890aef43.css.map",
-    "main.82a3aefc.js.map": "/static/js/main.82a3aefc.js.map",
+    "main.5a9b3828.js.map": "/static/js/main.5a9b3828.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.890aef43.css",
-    "static/js/main.82a3aefc.js"
+    "static/js/main.5a9b3828.js"
   ]
 }
