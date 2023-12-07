@@ -1,9 +1,8 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { AiFillCodeSandboxSquare } from "react-icons/ai";
-import resume from "../resume.pdf";
+import resume from "../Pushpraj_Patel_Resume.pdf";
 const SocialLinks = () => {
   const links = [
     {
@@ -32,7 +31,7 @@ const SocialLinks = () => {
           C-Sandbox <AiFillCodeSandboxSquare size={30} />
         </>
       ),
-      href: "https://codesandbox.io/dashboard/home?workspace=d0d9dc9f-4086-4dd0-9a31-01d5966b2381",
+      href: "https://codesandbox.io/u/pushpraj15295",
     },
     {
       id: 4,
