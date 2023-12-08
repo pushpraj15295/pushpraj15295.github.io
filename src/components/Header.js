@@ -1,21 +1,20 @@
-import { Button } from "@chakra-ui/button";
-import { useColorMode } from "@chakra-ui/color-mode";
-import { Image } from "@chakra-ui/image";
-import { Stack, Circle, Flex, Box, Text } from "@chakra-ui/layout";
-import { useMediaQuery } from "@chakra-ui/media-query";
 import React from "react";
-import { useTypewriter } from "react-simple-typewriter";
+import { Image } from "@chakra-ui/image";
+import { Button } from "@chakra-ui/button";
 import resume from "../Pushpraj_Patel_Resume.pdf";
+import { useColorMode } from "@chakra-ui/color-mode";
+import { useMediaQuery } from "@chakra-ui/media-query";
+import { useTypewriter } from "react-simple-typewriter";
+import { Stack, Circle, Flex, Box, Text } from "@chakra-ui/layout";
 
 import styles from "./Header.module.css";
 function Header() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
-
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   const { text } = useTypewriter({
-    words: isDark ? ["MERN Stack Developer"] : [" I'm a Full Stack Developer"],
+    words: isDark ? ["MERN Stack Developer"] : ["Full Stack Developer"],
     loop: 100,
     Cursor: "|",
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
@@ -25,24 +24,27 @@ function Header() {
     <Stack>
       <Circle
         position="absolute"
-        bg="blue.100"
+        bg={isDark ? "blue.100" : "blue.600"}
         opacity="0.1"
-        w="300px"
-        h="300px"
+        w={isNotSmallerScreen ? "300px" : "200px"}
+        h={isNotSmallerScreen ? "300px" : "200px"}
         alignSelf="flex-end"
       />
       <Flex
         direction={isNotSmallerScreen ? "row" : "column"}
-        p={isNotSmallerScreen ? "32" : "0"}
+        p={isNotSmallerScreen ? "24" : "0"}
         alignSelf="flex-start"
-        spacing="50px"
+        gap={isNotSmallerScreen ? "50px" : "0px"}
       >
         <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-start">
-          <Text fontSize="5xl" fontWeight="semibold">
+          <Text
+            fontSize={isNotSmallerScreen ? "5xl" : "3xl"}
+            fontWeight="semibold"
+          >
             Hi, I am
           </Text>
           <Text
-            fontSize="7xl"
+            fontSize={isNotSmallerScreen ? "7xl" : "4xl"}
             fontWeight="bold"
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             bgClip="text"
@@ -50,49 +52,41 @@ function Header() {
             Pushpraj patel
           </Text>
           <Text
-            fontSize="4xl"
+            fontSize={isNotSmallerScreen ? "4xl" : "23px"}
             fontWeight="bold"
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             bgClip="text"
+            height={isNotSmallerScreen ? "50px" : "40px"}
           >
-            {text}{" "}
+            {text}
           </Text>
 
           <Box>
             <a href={resume} download={true} target="_blank" rel="noreferrer">
-              <Button mt={8} colorScheme="telegram">
-                {" "}
-                Resume 📩
+              <Button
+                mt={8}
+                variant="outline"
+                bg={isDark ? "Highlight" : ""}
+                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                color={isDark ? "white" : "black"}
+              >
+                Download CV
               </Button>
             </a>
           </Box>
         </Box>
         <Box className={styles.ImageBox}>
           <Box>
-            {isDark ? (
-              <Image
-                alignSelf="center"
-                mt={isNotSmallerScreen ? "0" : "12"}
-                mb={isNotSmallerScreen ? "0" : "12"}
-                borderRadius="full"
-                backgroundColor="transparent"
-                boxShadow="lg"
-                width="-webkit-fit-content"
-                boxSize="350px"
-                src="https://avatars.githubusercontent.com/u/101568029?v=4"
-              />
-            ) : (
-              <Image
-                alignSelf="center"
-                mt={isNotSmallerScreen ? "0" : "12"}
-                mb={isNotSmallerScreen ? "0" : "12"}
-                borderRadius="full"
-                backgroundColor="transparent"
-                boxShadow="lg"
-                boxSize="350px"
-                src="https://avatars.githubusercontent.com/u/101568029?v=4"
-              />
-            )}
+            <Image
+              alignSelf="center"
+              mt={isNotSmallerScreen ? "0" : "12"}
+              mb={isNotSmallerScreen ? "0" : "12"}
+              borderRadius="full"
+              backgroundColor="transparent"
+              w={isNotSmallerScreen ? "350px" : "250px"}
+              h={isNotSmallerScreen ? "350px" : "250px"}
+              src="https://avatars.githubusercontent.com/u/101568029?v=4"
+            />
           </Box>
         </Box>
       </Flex>
@@ -106,9 +100,8 @@ function Header() {
               mb={isNotSmallerScreen ? "0" : "12"}
               borderRadius="full"
               backgroundColor="transparent"
-              boxShadow="lg"
-              width="-webkit-fit-content"
-              boxSize="350px"
+              w={isNotSmallerScreen ? "350px" : "250px"}
+              h={isNotSmallerScreen ? "350px" : "250px"}
               src="https://avatars.githubusercontent.com/u/101568029?v=4"
             />
           ) : (
@@ -118,8 +111,8 @@ function Header() {
               mb={isNotSmallerScreen ? "0" : "12"}
               borderRadius="full"
               backgroundColor="transparent"
-              boxShadow="lg"
-              boxSize="350px"
+              w={isNotSmallerScreen ? "350px" : "250px"}
+              h={isNotSmallerScreen ? "350px" : "250px"}
               src="https://avatars.githubusercontent.com/u/101568029?v=4"
             />
           )}

@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { AiFillCodeSandboxSquare } from "react-icons/ai";
 import resume from "../Pushpraj_Patel_Resume.pdf";
+
 const SocialLinks = () => {
   const links = [
     {
@@ -40,8 +41,9 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: resume,
-      download: true,
+      // href: resume,
+      // download: true,
+      href: "https://drive.google.com/file/d/1r_G1kPt69vmEP_NF6IW1P4jpQz2NptJH/view?usp=share_link",
     },
   ];
 
@@ -60,7 +62,7 @@ const SocialLinks = () => {
             <a
               href={href}
               className="flex justify-between items-center w-full text-white"
-              download={download}
+              // download={download}
               target="_blank"
               rel="noreferrer"
             >

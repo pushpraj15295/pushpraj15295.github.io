@@ -1,0 +1,25 @@
+/* Add this to your stylesheet */
+.tooltip::before {
+  content: attr(titl);
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    #02dffc,
+    #3a8acb,
+    #a266ac
+  ); /* Use explicit color values */
+  padding: 10px 18px;
+  border-radius: 4px 40px 4px 14px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  top: 71px;
+  right: -60px;
+  width: max-content;
+  font-weight: 600;
+}
+
+.tooltip:hover::before {
+  opacity: 1;
+}
