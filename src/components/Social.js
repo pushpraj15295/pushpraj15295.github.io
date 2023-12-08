@@ -1,137 +1,19 @@
 import React from "react";
 import Icon from "@chakra-ui/icon";
 import styles from "./social.module.css";
-import { FaNodeJs } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
-import { FaGitAlt } from "react-icons/fa";
-import { SiFlutter } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
-import { FaGithubSquare } from "react-icons/fa";
-import { IoLogoBitbucket } from "react-icons/io";
+
 import { useColorMode, useMediaQuery } from "@chakra-ui/react";
 import { SimpleGrid, Box, Text, Flex } from "@chakra-ui/layout";
-import {
-  SiChakraui,
-  SiCss3,
-  SiExpress,
-  SiHtml5,
-  SiJavascript,
-  SiMongodb,
-  SiReact,
-  SiMicrosoftacademic,
-  SiRedux,
-} from "react-icons/si";
+import { SiMicrosoftacademic } from "react-icons/si";
+import { skillsData, softSkills } from "../utils";
 
-const skillsData = [
-  {
-    id: 1,
-    iconName: SiReact,
-    titleName: "ReactJS",
-  },
-  {
-    id: 2,
-    iconName: TbBrandNextjs,
-    titleName: "NextJS",
-  },
-  {
-    id: 3,
-    iconName: SiJavascript,
-    titleName: "Javascript",
-  },
-  {
-    id: 4,
-    iconName: SiCss3,
-    titleName: "CSS...",
-  },
-  {
-    id: 5,
-    iconName: SiRedux,
-    titleName: "Redux & Redux Toolkit",
-  },
-  {
-    id: 6,
-    iconName: SiMongodb,
-    titleName: "MongoDB",
-  },
-  {
-    id: 7,
-    iconName: FaNodeJs,
-    titleName: "NodeJS",
-  },
-  {
-    id: 8,
-    iconName: SiExpress,
-    titleName: "Express",
-  },
-  {
-    id: 9,
-    iconName: SiHtml5,
-    titleName: "HTML...",
-  },
-  {
-    id: 10,
-    iconName: SiChakraui,
-    titleName: "Chakra UI",
-  },
-  {
-    id: 11,
-    iconName: SiTypescript,
-    titleName: "Type Script",
-  },
-  {
-    id: 12,
-    iconName: FaGitAlt,
-    titleName: "Git...",
-  },
-  {
-    id: 13,
-    iconName: IoLogoBitbucket,
-    titleName: "Bitbuket",
-  },
-  {
-    id: 15,
-    iconName: FaGithubSquare,
-    titleName: "Github...",
-  },
-  {
-    id: 16,
-    iconName: SiFlutter,
-    titleName: "Flutter - currently learning...",
-  },
-];
-const softSkills = [
-  {
-    id: 1,
-    skill: "Teamwork & Adaptability",
-  },
-  {
-    id: 2,
-    skill: " Hardwork & Problem solving",
-  },
-  {
-    id: 3,
-    skill: "Time & workloads management",
-  },
-  {
-    id: 4,
-    skill: "Contributing to the improvement of existing processes",
-  },
-  {
-    id: 5,
-    skill: "Taking responsibility for personal and professional growth",
-  },
-  {
-    id: 6,
-    skill: "Embracing change and learning new technologies",
-  },
-];
 function Social() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
-    <Box >
+    <Box>
       <Box width="80%" margin="auto" alignItems="center">
         <Flex>
           <Box marginTop="12px">
@@ -215,7 +97,7 @@ function Social() {
               justifyContent={"center"}
               alignItems={"center"}
               overflow={"hidden"}
-              >
+            >
               <Text
                 fontSize={isNotSmallerScreen ? "20px" : "1xl"}
                 fontWeight="bold"

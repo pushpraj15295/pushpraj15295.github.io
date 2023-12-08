@@ -1,5 +1,3 @@
-import { FaNodeJs } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
 import {
   SiCss3,
   SiExpress,
@@ -10,10 +8,15 @@ import {
   SiTailwindcss,
   SiFirebase,
   SiChakraui,
+  SiRedux,
 } from "react-icons/si";
-
-
-
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaNodeJs } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+import { SiFlutter } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { FaGithubSquare } from "react-icons/fa";
+import { IoLogoBitbucket } from "react-icons/io";
 
 export const CardData = [
   {
@@ -55,5 +58,111 @@ export const CardData = [
     ],
     liveLink: "https://myhours-clone-jade.vercel.app/",
     gitHubLink: "https://github.com/Surya9263/hideous-crack-5602",
+  },
+];
+
+// social
+export const skillsData = [
+  {
+    id: 1,
+    iconName: SiReact,
+    titleName: "ReactJS",
+  },
+  {
+    id: 2,
+    iconName: TbBrandNextjs,
+    titleName: "NextJS",
+  },
+  {
+    id: 3,
+    iconName: SiJavascript,
+    titleName: "Javascript",
+  },
+  {
+    id: 4,
+    iconName: SiCss3,
+    titleName: "CSS...",
+  },
+  {
+    id: 5,
+    iconName: SiRedux,
+    titleName: "Redux & Redux Toolkit",
+  },
+  {
+    id: 6,
+    iconName: SiMongodb,
+    titleName: "MongoDB",
+  },
+  {
+    id: 7,
+    iconName: FaNodeJs,
+    titleName: "NodeJS",
+  },
+  {
+    id: 8,
+    iconName: SiExpress,
+    titleName: "Express",
+  },
+  {
+    id: 9,
+    iconName: SiHtml5,
+    titleName: "HTML...",
+  },
+  {
+    id: 10,
+    iconName: SiChakraui,
+    titleName: "Chakra UI",
+  },
+  {
+    id: 11,
+    iconName: SiTypescript,
+    titleName: "Type Script",
+  },
+  {
+    id: 12,
+    iconName: FaGitAlt,
+    titleName: "Git...",
+  },
+  {
+    id: 13,
+    iconName: IoLogoBitbucket,
+    titleName: "Bitbuket",
+  },
+  {
+    id: 15,
+    iconName: FaGithubSquare,
+    titleName: "Github...",
+  },
+  {
+    id: 16,
+    iconName: SiFlutter,
+    titleName: "Flutter - currently learning...",
+  },
+];
+
+export const softSkills = [
+  {
+    id: 1,
+    skill: "Teamwork & Adaptability",
+  },
+  {
+    id: 2,
+    skill: " Hardwork & Problem solving",
+  },
+  {
+    id: 3,
+    skill: "Time & workloads management",
+  },
+  {
+    id: 4,
+    skill: "Contributing to the improvement of existing processes",
+  },
+  {
+    id: 5,
+    skill: "Taking responsibility for personal and professional growth",
+  },
+  {
+    id: 6,
+    skill: "Embracing change and learning new technologies",
   },
 ];
