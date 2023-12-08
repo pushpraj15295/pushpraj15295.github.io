@@ -86,7 +86,7 @@ function Project() {
                       key={item.id}
                       style={{ boxSize: "25", cursor: "pointer" }}
                       titl={item.titleName ? item.titleName : ""}
-                      className={isNotSmallerScreen && styles.tooltip}
+                      className={isNotSmallerScreen ? styles.tooltip : ""}
                     >
                       {item?.iconName()}
                     </div>

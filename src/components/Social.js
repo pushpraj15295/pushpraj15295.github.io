@@ -46,7 +46,7 @@ function Social() {
               bgGradient="linear(to-r, cyan.200, blue.300, purple.400)"
               key={el.id}
               titl={el.titleName ? el.titleName : ""}
-              className={isNotSmallerScreen && styles.tooltip}
+              className={isNotSmallerScreen ? styles.tooltip : ""}
             >
               <div
                 style={{

@@ -2,7 +2,6 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { AiFillCodeSandboxSquare } from "react-icons/ai";
-import resume from "../Pushpraj_Patel_Resume.pdf";
 
 const SocialLinks = () => {
   const links = [

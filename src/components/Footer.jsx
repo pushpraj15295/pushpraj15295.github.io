@@ -15,7 +15,7 @@ function Footer() {
     <Box
       width="100%"
       margin="auto"
-      class="text-center p-4 bg-black footer"
+      className="text-center p-4 bg-black footer"
       backgroundColor="rgb(31,53,80)"
       height={isNotSmallerScreen ? "94px" : "115px"}
     >

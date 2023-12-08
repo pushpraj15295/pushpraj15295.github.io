@@ -92,7 +92,7 @@ function App() {
         </Box>
         <br /> <br /> <br />
         <Box>
-          <githubC />
+          {/* <githubC /> */}
         </Box>
         <Box ref={contectref}>
           <Contect />
