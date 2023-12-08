@@ -97,10 +97,11 @@ function App() {
         <Box ref={contectref}>
           <Contect />
         </Box>
-        <br /> <br /> <br />
-        <Footer />
         <SocialLinks />
       </VStack>
+
+      <br /> <br /> 
+        <Footer />
     </>
   );
 }

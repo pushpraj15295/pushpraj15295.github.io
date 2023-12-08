@@ -1,8 +1,16 @@
-import { Box, Flex, Icon, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Icon,
+  SimpleGrid,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import React from "react";
 import { FcContacts } from "react-icons/fc";
-import { BsFillPhoneFill } from "react-icons/bs";
-import { AiTwotoneMail } from "react-icons/ai";
+import { RiUserLocationFill } from "react-icons/ri";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
 //function for form reset
 function handleSubmit(e) {
   setTimeout(() => {
@@ -11,17 +19,18 @@ function handleSubmit(e) {
 }
 
 const Contact = () => {
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
     <>
       <Box width="100%">
         <Flex>
-          <Box marginTop="12px">
-            <Icon as={FcContacts} boxSize="50" />
+          <Box marginTop={isNotSmallerScreen ? "12px" : "3px"}>
+            <Icon as={FcContacts} boxSize={isNotSmallerScreen ? "50" : "8"} />
           </Box>
-          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;
           <Box borderRadius="15px">
             <Text
-              fontSize="5xl"
+              fontSize={isNotSmallerScreen ? "5xl" : "2xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.700, blue.700, purple.200)"
               bgClip="text"
@@ -34,15 +43,19 @@ const Contact = () => {
         <br />
       </Box>
       <Box>
-        <Box border="1px solid rgb(50,96,140)" borderBottomRadius="15px">
+        <Box
+          border={isNotSmallerScreen && "1px solid rgb(50,96,140)"}
+          borderBottomRadius="15px"
+        >
           <div className="pb-8">
             <Text
-              fontSize="2xl"
+              fontSize={isNotSmallerScreen ? "2xl" : "1xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.700, blue.700, purple.200)"
               padding="10px"
               className="py-6"
               margin="auto"
+              textAlign={"center"}
             >
               Submit the form below to get in touch with me
             </Text>
@@ -89,14 +102,20 @@ const Contact = () => {
         </Box>
       </Box>
       <br />
-      <br />
 
       <SimpleGrid columns={[1, 2]}>
         <Box>
-          <Flex>
-            <Icon as={BsFillPhoneFill} boxSize="50" /> &nbsp; &nbsp;
+          <Flex
+            alignItems={"center"}
+            flexDirection={isNotSmallerScreen ? "row" : "column"}
+          >
+            <Icon
+              as={FaPhoneSquareAlt}
+              boxSize={isNotSmallerScreen ? "50" : "8"}
+            />{" "}
+            &nbsp; &nbsp;
             <Text
-              fontSize="2xl"
+              fontSize={isNotSmallerScreen ? "2xl" : "1xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.700, blue.700, purple.200)"
               bgClip="text"
@@ -107,18 +126,20 @@ const Contact = () => {
         </Box>
         <Box>
           <Flex>
-            <Icon as={AiTwotoneMail} boxSize="50" /> &nbsp; &nbsp;{" "}
+            <Icon as={FaMailBulk} boxSize={isNotSmallerScreen ? "50" : "8"} />{" "}
+            &nbsp; &nbsp;{" "}
             <Text
-              fontSize="xl"
+              fontSize={isNotSmallerScreen ? "2xl" : "1xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.700, blue.700, purple.200)"
               bgClip="text"
             >
               {" "}
-              pushpraj15295@gmail.com{" "}
+              pushpraj150295@gmail.com
             </Text>{" "}
           </Flex>
         </Box>
+        
       </SimpleGrid>
     </>
   );

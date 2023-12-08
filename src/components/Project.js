@@ -1,37 +1,31 @@
 import React from "react";
-import { Box, Flex, Text, SimpleGrid } from "@chakra-ui/layout";
 import Icon from "@chakra-ui/icon";
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { Button, Img } from "@chakra-ui/react";
+import styles from "./social.module.css";
 import { FaGithub } from "react-icons/fa";
-
-import { FaNodeJs } from "react-icons/fa";
-import {
-  SiChakraui,
-  SiCss3,
-  SiExpress,
-  SiHtml5,
-  SiJavascript,
-  SiMongodb,
-  SiReact,
-} from "react-icons/si";
-
 import GitHubCalendar from "react-github-calendar";
-
-import styles from "./project.module.css";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { Box, Flex, Text, SimpleGrid } from "@chakra-ui/layout";
+import { Button, Img, useColorMode, useMediaQuery } from "@chakra-ui/react";
+import { CardData } from "../utils";
 
 function Project() {
+  const { colorMode } = useColorMode();
+  const isDark = colorMode === "dark";
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
     <>
-      <Box width="80%" margin="auto">
+      <Box width={isNotSmallerScreen ? "80%" : "100%"} margin="auto">
         <Flex>
-          <Box marginTop="12px">
-            <Icon as={AiOutlineFundProjectionScreen} boxSize="50" />
+          <Box marginTop="14px">
+            <Icon
+              as={AiOutlineFundProjectionScreen}
+              boxSize={isNotSmallerScreen ? "46" : "10"}
+            />
           </Box>
           &nbsp;&nbsp;&nbsp;
           <Box>
             <Text
-              fontSize="5xl"
+              fontSize={isNotSmallerScreen ? "5xl" : "3xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.700, blue.700, purple.200)"
               bgClip="text"
@@ -42,84 +36,83 @@ function Project() {
         </Flex>
         <br /> <br />
         <Box w="100%">
-          <Flex
-            className={styles.projectBox}
-            bg="blue.700"
-            _hover={{ bg: "teal.600" }}
-            w="99%"
-            margin="auto"
-            border="1px solid black"
-            borderRadius="16px"
-          >
-            <Box className={styles.projectBoxLeft}>
-              <Box
-                margin="15px"
-                border="5px solid rgb(237,242,247)"
-                borderRadius="6px"
-              >
-                <Img src="https://raw.githubusercontent.com/Surya9263/hideous-crack-5602/main/Website%20sneak%20peeks/Homepage.png"></Img>
+          {/* ======================================================================= */}
+          {CardData?.map((el) => (
+            <Flex
+              key={el.id}
+              bg="blue.700"
+              _hover={{ bg: "teal.600" }}
+              w="99%"
+              margin="auto"
+              border="1px solid black"
+              borderRadius="16px"
+              flexDirection={isNotSmallerScreen ? "row" : "column"}
+              mb={"20px"}
+            >
+              <Box>
+                <Box
+                  margin="15px"
+                  border="5px solid rgb(237,242,247)"
+                  borderRadius="6px"
+                >
+                  <Img src={el.imgSrc}></Img>
+                </Box>
               </Box>
-            </Box>
-            <Box className={styles.projectBoxRight}>
-              <Text
-                color="white"
-                p="4"
-                fontSize="35px"
-                fontWeight="semibold"
-                textAlign="center"
-              >
-                MyHours Clone
-              </Text>
-              <br />
-              <Text fontSize="20px" p="4" textAlign="center">
-                My Hours is an easy way to track billable hours across various
-                projects. makes time tracking for different tasks simple and
-                reports your work.
-              </Text>
-
-              {/* ReactJs, JavaScript, CSS,Chakra-Ui and Swiper. */}
-              <Flex
-                margin="20px"
-                marginBottom="30px"
-                justifyContent="space-evenly"
-              >
-                <Icon as={SiHtml5} boxSize="25" />
-                <Icon as={SiCss3} boxSize="25" />
-                <Icon as={SiJavascript} boxSize="25" />
-                <Icon as={SiChakraui} boxSize="25" />
-                <Icon as={SiReact} boxSize="25" />
-                <Icon as={SiMongodb} boxSize="25" />
-                <Icon as={SiExpress} boxSize="25" />
-                <Icon as={FaNodeJs} boxSize="25" />
-              </Flex>
-
-              <Flex
-                margin="20px"
-                marginBottom="15px"
-                justifyContent="space-evenly"
-              >
-                <a
-                  href="https://myhours-clone-jade.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
+              <Box>
+                <Text
+                  color="white"
+                  fontSize={isNotSmallerScreen ? "30px" : "20px"}
+                  fontWeight="semibold"
+                  textAlign="center"
+                  p={isNotSmallerScreen ? "4" : "2"}
                 >
-                  <Button colorScheme="gray">Go Live ♂️</Button>
-                </a>
-
-                <a
-                  href="https://github.com/Surya9263/hideous-crack-5602"
-                  target="_blank"
-                  rel="noreferrer"
+                  {el.projectName}
+                </Text>
+                <Text
+                  fontSize={isNotSmallerScreen ? "18px" : "12px"}
+                  p={isNotSmallerScreen ? "4" : "2"}
+                  textAlign="center"
                 >
-                  {" "}
-                  <Button colorScheme="gray">Code Base</Button>
-                </a>
-              </Flex>
-            </Box>
-          </Flex>
-          <br />
+                  {el.projectDiscription}
+                </Text>
+                <Flex
+                  margin="20px"
+                  marginBottom="30px"
+                  justifyContent="space-evenly"
+                  position={"relative"}
+                >
+                  {el?.techstack?.map((item) => (
+                    <div
+                      key={item.id}
+                      style={{ boxSize: "25", cursor: "pointer" }}
+                      titl={item.titleName ? item.titleName : ""}
+                      className={isNotSmallerScreen && styles.tooltip}
+                    >
+                      {item?.iconName()}
+                    </div>
+                  ))}
+                </Flex>
 
-          <Flex
+                <Flex
+                  margin="20px"
+                  marginBottom="15px"
+                  justifyContent="space-evenly"
+                >
+                  <a href={el.liveLink} target="_blank" rel="noreferrer">
+                    <Button colorScheme="gray">Go Live ♂️</Button>
+                  </a>
+
+                  <a href={el.gitHubLink} target="_blank" rel="noreferrer">
+                    {" "}
+                    <Button colorScheme="gray">Code Base</Button>
+                  </a>
+                </Flex>
+              </Box>
+            </Flex>
+          ))}
+
+          {/* ======================================================================= */}
+          {/* <Flex
             className={styles.projectBox}
             bg="blue.700"
             _hover={{ bg: "rgb(33,120,103)" }}
@@ -154,8 +147,6 @@ function Project() {
                 individual thing. The project was finished and executed in five
                 days.
               </Text>
-
-              {/* ReactJs, JavaScript, CSS,Chakra-Ui and Swiper. */}
               <Flex
                 margin="20px"
                 marginBottom="30px"
@@ -192,9 +183,9 @@ function Project() {
               </Flex>
             </Box>
           </Flex>
-          <br />
+          <br /> */}
 
-          <Flex
+          {/* <Flex
             className={styles.projectBox}
             bg="blue.700"
             _hover={{ bg: "teal.600" }}
@@ -228,8 +219,6 @@ function Project() {
                 is a website that mainly concentrates on healthy and daily-use
                 products.
               </Text>
-
-              {/* ReactJs, JavaScript, CSS,Chakra-Ui and Swiper. */}
               <Flex
                 margin="20px"
                 marginBottom="30px"
@@ -264,24 +253,24 @@ function Project() {
               </Flex>
             </Box>
           </Flex>
-          <br />
+          <br /> */}
         </Box>
       </Box>
-      <br /> <br />
+      <br /> 
       <Box width="80%" margin="auto">
         <Flex>
           <Box marginTop="12px">
-            <Icon as={FaGithub} boxSize="50" />
+            <Icon as={FaGithub} boxSize={isNotSmallerScreen ? "50" : "10"} />
           </Box>
           &nbsp;&nbsp;&nbsp;
           <Box>
             <Text
-              fontSize="5xl"
+              fontSize={isNotSmallerScreen ? "4xl" : "2xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.700, blue.700, purple.200)"
               bgClip="text"
             >
-              Github Calendar & Stats
+              Stats & Github Calendar
             </Text>
           </Box>
         </Flex>

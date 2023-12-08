@@ -1,16 +1,16 @@
-import Icon from "@chakra-ui/icon";
-import { SimpleGrid, Box, Text, Flex } from "@chakra-ui/layout";
 import React from "react";
-import { FaNodeJs } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { GiSkills } from "react-icons/gi";
-import ReactTooltip from "react-tooltip";
-import { SiTypescript } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { IoLogoBitbucket } from "react-icons/io";
-import { FaGithubSquare } from "react-icons/fa";
-import { SiFlutter } from "react-icons/si";
+import Icon from "@chakra-ui/icon";
 import styles from "./social.module.css";
+import { FaNodeJs } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
+import { FaGitAlt } from "react-icons/fa";
+import { SiFlutter } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaGithubSquare } from "react-icons/fa";
+import { IoLogoBitbucket } from "react-icons/io";
+import { useColorMode, useMediaQuery } from "@chakra-ui/react";
+import { SimpleGrid, Box, Text, Flex } from "@chakra-ui/layout";
 import {
   SiChakraui,
   SiCss3,
@@ -22,7 +22,6 @@ import {
   SiMicrosoftacademic,
   SiRedux,
 } from "react-icons/si";
-import { useColorMode, useMediaQuery } from "@chakra-ui/react";
 
 const skillsData = [
   {
@@ -132,7 +131,7 @@ function Social() {
   const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
-    <Box width="100%">
+    <Box >
       <Box width="80%" margin="auto" alignItems="center">
         <Flex>
           <Box marginTop="12px">
