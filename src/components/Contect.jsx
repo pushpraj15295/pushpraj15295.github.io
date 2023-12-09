@@ -2,16 +2,15 @@ import {
   Box,
   Flex,
   Icon,
-  SimpleGrid,
   Text,
+  SimpleGrid,
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import { FcContacts } from "react-icons/fc";
-import { RiUserLocationFill } from "react-icons/ri";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
-//function for form reset
+
 function handleSubmit(e) {
   setTimeout(() => {
     e.target.reset();
@@ -66,7 +65,7 @@ const Contact = () => {
               onSubmit={handleSubmit}
               name="contact"
               method="POST"
-              action="https://getform.io/f/c59c9849-0c84-4d14-a8e5-1f51c7f24c12"
+              action="https://getform.io/f/795ac606-4ce9-4dad-8403-04900e499000"
               className=" flex flex-col w-full md:w-1/2"
             >
               <input
@@ -88,7 +87,7 @@ const Contact = () => {
                 placeholder="Enter your message"
                 rows="5"
                 required
-                className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                className="p-2 bg-transparent border-2 rounded-md  focus:outline-none"
               ></textarea>
 
               <button
@@ -139,7 +138,6 @@ const Contact = () => {
             </Text>{" "}
           </Flex>
         </Box>
-        
       </SimpleGrid>
     </>
   );

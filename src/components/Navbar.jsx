@@ -5,13 +5,11 @@ import styles from "./Navbar.module.css";
 import { Button } from "@chakra-ui/button";
 import { GiHistogram } from "react-icons/gi";
 import { MdContactPhone } from "react-icons/md";
+import { useMediaQuery } from "@chakra-ui/react";
 import { FaProjectDiagram } from "react-icons/fa";
-import resume from "../Pushpraj_Patel_Resume.pdf";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { Flex, Box, Heading } from "@chakra-ui/layout";
-import { GiSpellBook, GiSwordsPower} from "react-icons/gi";
-import { useMediaQuery } from "@chakra-ui/react";
-
+import { GiSpellBook, GiSwordsPower } from "react-icons/gi";
 
 const Navbar = ({
   homeref,
@@ -75,8 +73,11 @@ const Navbar = ({
       <Box cursor="pointer" onClick={() => handleClick(homeref.current)}>
         <Icon as={FaCode} boxSize={isNotSmallerScreen ? "50" : "10"} />
       </Box>
-      <Flex width={isNotSmallerScreen ? "65%" : "85%"}
-       alignItems="center" justifyContent="space-between">
+      <Flex
+        width={isNotSmallerScreen ? "65%" : "85%"}
+        alignItems="center"
+        justifyContent="space-between"
+      >
         {NavData?.map((el) => (
           <Box key={el?.id}>
             <Button
@@ -89,8 +90,7 @@ const Navbar = ({
                   justifyContent="space-between"
                   gap="1rem"
                 >
-                  {/* <MdContactPhone /> */}
-                  {el?.iconName()}
+                  {el?.iconName()} 
                   <b className={styles.hideT}>{el?.name}</b>
                 </Flex>
               </Heading>

@@ -2,11 +2,10 @@ import React from "react";
 import Icon from "@chakra-ui/icon";
 import styles from "./social.module.css";
 import { GiSkills } from "react-icons/gi";
-
+import { skillsData, softSkills } from "../utils";
+import { SiMicrosoftacademic } from "react-icons/si";
 import { useColorMode, useMediaQuery } from "@chakra-ui/react";
 import { SimpleGrid, Box, Text, Flex } from "@chakra-ui/layout";
-import { SiMicrosoftacademic } from "react-icons/si";
-import { skillsData, softSkills } from "../utils";
 
 function Social() {
   const { colorMode } = useColorMode();

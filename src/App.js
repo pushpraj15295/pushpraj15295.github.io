@@ -1,10 +1,10 @@
 import { useRef } from "react";
-
+import { RiProfileFill } from "react-icons/ri";
 import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode";
-import { Flex, VStack, Heading, Spacer, Box } from "@chakra-ui/layout";
+import { Flex, VStack, Spacer, Box } from "@chakra-ui/layout";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from "react-icons/fa";
-import { RiProfileFill } from "react-icons/ri";
+
 
 import About from "./components/About";
 import Contect from "./components/Contect";
@@ -36,13 +36,11 @@ function App() {
         projectref={projectref}
         contectref={contectref}
       />
-
       <VStack
         p={5}
         width="98%"
         margin="auto"
         ref={homeref}
-        // overflow={"hidden"}
       >
         <Flex w="100%" mt="4rem">
           <Spacer></Spacer>
@@ -91,17 +89,13 @@ function App() {
           <Project></Project>
         </Box>
         <br /> <br /> <br />
-        <Box>
-          {/* <githubC /> */}
-        </Box>
         <Box ref={contectref}>
           <Contect />
         </Box>
         <SocialLinks />
       </VStack>
-
-      <br /> <br /> 
-        <Footer />
+      <br /> <br />
+      <Footer />
     </>
   );
 }

@@ -1,16 +1,14 @@
 import React from "react";
 import Icon from "@chakra-ui/icon";
+import { CardData } from "../utils";
 import styles from "./social.module.css";
 import { FaGithub } from "react-icons/fa";
 import GitHubCalendar from "react-github-calendar";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { Box, Flex, Text, SimpleGrid } from "@chakra-ui/layout";
-import { Button, Img, useColorMode, useMediaQuery } from "@chakra-ui/react";
-import { CardData } from "../utils";
+import { Button, Img, useMediaQuery } from "@chakra-ui/react";
 
 function Project() {
-  const { colorMode } = useColorMode();
-  const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
     <>
@@ -36,7 +34,6 @@ function Project() {
         </Flex>
         <br /> <br />
         <Box w="100%">
-          {/* ======================================================================= */}
           {CardData?.map((el) => (
             <Flex
               key={el.id}
@@ -256,7 +253,7 @@ function Project() {
           <br /> */}
         </Box>
       </Box>
-      <br /> 
+      <br />
       <Box width="80%" margin="auto">
         <Flex>
           <Box marginTop="12px">
