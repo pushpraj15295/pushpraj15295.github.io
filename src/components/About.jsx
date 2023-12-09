@@ -37,7 +37,7 @@ const About = () => {
         </Flex>
 
         <SimpleGrid
-          columns={[1, 1, 2]}
+          columns={[1, 2, 2]}
           spacing={isNotSmallerScreen ? "10" : "4"}
           height={isNotSmallerScreen ? "400px" : ""}
           mt={isNotSmallerScreen ? "1rem" : "0rem"}

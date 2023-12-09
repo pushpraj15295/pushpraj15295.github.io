@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar";
 import Project from "./components/Project";
 import Social from "./components/Social";
 import SocialLinks from "./components/SocialLinks";
+import Experience from "./components/Experience";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -80,6 +81,10 @@ function App() {
           <About />
         </Box>
         <br /> <br />
+        <Box ref={experienceref}>
+          <Experience />
+        </Box>
+        <br /> <br /> <br/>
         <Box ref={skillref}>
           <Social></Social>
         </Box>

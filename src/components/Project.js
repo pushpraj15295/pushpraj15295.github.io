@@ -52,7 +52,17 @@ function Project() {
                   border="5px solid rgb(237,242,247)"
                   borderRadius="6px"
                 >
-                  <Img src={el.imgSrc}></Img>
+                  {isNotSmallerScreen ? (
+                    <div id="newpage">
+                      <iframe
+                        src={el.liveLink}
+                        width="600"
+                        height="325"
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <Img src={el.imgSrc}></Img>
+                  )}
                 </Box>
               </Box>
               <Box>
