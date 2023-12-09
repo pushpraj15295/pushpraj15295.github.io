@@ -48,7 +48,7 @@ const Experience = () => {
             <Box>
               <Text
                 fontSize={isNotSmallerScreen ? "26px" : "18px"}
-                color="whiteAlpha.800"
+                color={isDark ? "whiteAlpha.800" : "blackAlpha.800"}
                 fontWeight="bold"
                 marginTop="20px"
                 lineHeight={isNotSmallerScreen ? "8" : "6"}
@@ -57,7 +57,7 @@ const Experience = () => {
                 <br />
               </Text>
               <Text
-                color="whiteAlpha.800"
+                color={isDark ? "whiteAlpha.800" : "blackAlpha.800"}
                 fontSize={isNotSmallerScreen ? "18px" : "14px"}
                 marginTop="20px"
                 lineHeight={isNotSmallerScreen ? "8" : "6"}
