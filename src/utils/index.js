@@ -56,7 +56,7 @@ export const CardData = [
       { id: 7, iconName: SiHtml5, titleName: "Html" },
       { id: 8, iconName: SiCss3, titleName: "CSS" },
     ],
-    liveLink: "https://myhours-clone-jade.vercel.app/",
+    liveLink: "https://myhours-com.vercel.app/",
     gitHubLink: "https://github.com/Surya9263/hideous-crack-5602",
   },
 ];
