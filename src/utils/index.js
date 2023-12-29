@@ -59,6 +59,20 @@ export const CardData = [
     liveLink: "https://myhours-com.vercel.app/",
     gitHubLink: "https://github.com/Surya9263/hideous-crack-5602",
   },
+  {
+    id: 3,
+    imgSrc:
+      "https://raw.githubusercontent.com/pushpraj15295/css_tricks/main/my-css-idea/public/main.png",
+    projectName: "Css Anime",
+    projectDiscription:
+      "Explore the enchanting realm of CSS Anime, where every webpage is a canvas of creativity.",
+    techstack: [
+      { id: 1, iconName: SiReact, titleName: "ReactJS" },
+      { id: 2, iconName: SiCss3, titleName: "CSS" },
+    ],
+    liveLink: "https://css-tricks-seven.vercel.app/",
+    gitHubLink: "https://github.com/pushpraj15295/css_tricks",
+  },
 ];
 
 // social
