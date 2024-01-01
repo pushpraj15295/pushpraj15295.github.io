@@ -5,7 +5,6 @@ import { useColorMode } from "@chakra-ui/color-mode";
 import { Flex, VStack, Spacer, Box } from "@chakra-ui/layout";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from "react-icons/fa";
 
-
 import About from "./components/About";
 import Contect from "./components/Contect";
 import Footer from "./components/Footer";
@@ -38,12 +37,7 @@ function App() {
         projectref={projectref}
         contectref={contectref}
       />
-      <VStack
-        p={5}
-        width="98%"
-        margin="auto"
-        ref={homeref}
-      >
+      <VStack p={5} width="98%" margin="auto" ref={homeref}>
         <Flex w="100%" mt="4rem">
           <Spacer></Spacer>
           <a
@@ -85,7 +79,7 @@ function App() {
         <Box ref={experienceref}>
           <Experience />
         </Box>
-        <br /> <br /> <br/>
+        <br /> <br /> <br />
         <Box ref={skillref}>
           <Social></Social>
         </Box>

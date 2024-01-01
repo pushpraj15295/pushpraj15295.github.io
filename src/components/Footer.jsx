@@ -26,11 +26,11 @@ function Footer() {
         textAlign={"center"}
       >
         <Text
-          fontSize={isNotSmallerScreen ? "4xl" : "2xl"}
-          fontWeight="bold"
-          bgGradient="linear(to-r, cyan.600, blue.500, purple.300)"
           bgClip="text"
           padding="20px"
+          fontWeight="bold"
+          fontSize={isNotSmallerScreen ? "4xl" : "2xl"}
+          bgGradient="linear(to-r, cyan.600, blue.500, purple.300)"
         >
           {text}
         </Text>

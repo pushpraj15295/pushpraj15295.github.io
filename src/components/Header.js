@@ -1,5 +1,6 @@
 import React from "react";
 import { Image } from "@chakra-ui/image";
+import styles from "./Header.module.css";
 import { Button } from "@chakra-ui/button";
 import resume from "../Pushpraj_Patel_Resume.pdf";
 import { useColorMode } from "@chakra-ui/color-mode";
@@ -7,7 +8,6 @@ import { useMediaQuery } from "@chakra-ui/media-query";
 import { useTypewriter } from "react-simple-typewriter";
 import { Stack, Circle, Flex, Box, Text } from "@chakra-ui/layout";
 
-import styles from "./Header.module.css";
 function Header() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -23,9 +23,9 @@ function Header() {
   return (
     <Stack>
       <Circle
+        opacity="0.1"
         position="absolute"
         bg={isDark ? "blue.100" : "blue.600"}
-        opacity="0.1"
         w={isNotSmallerScreen ? "300px" : "200px"}
         h={isNotSmallerScreen ? "300px" : "200px"}
         alignSelf="flex-end"

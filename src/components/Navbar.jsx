@@ -90,7 +90,7 @@ const Navbar = ({
                   justifyContent="space-between"
                   gap="1rem"
                 >
-                  {el?.iconName()} 
+                  {el?.iconName()}
                   <b className={styles.hideT}>{el?.name}</b>
                 </Flex>
               </Heading>

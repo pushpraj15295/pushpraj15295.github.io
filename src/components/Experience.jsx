@@ -1,7 +1,6 @@
 import React from "react";
 import Icon from "@chakra-ui/icon";
 import { FcWorkflow } from "react-icons/fc";
-import { GiPointing } from "react-icons/gi";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { Box, Text, Flex, SimpleGrid } from "@chakra-ui/layout";
@@ -78,11 +77,15 @@ const Experience = () => {
                 marginTop="20px"
                 lineHeight={isNotSmallerScreen ? "8" : "6"}
               >
-                ▣  created a dynamic and user-friendly website builder platforms and implemented a comprehensive solution for users to effortlessly create and customize their websites.
+                ▣ created a dynamic and user-friendly website builder platforms
+                and implemented a comprehensive solution for users to
+                effortlessly create and customize their websites.
                 <br />
                 ▣ Collaborated on numerous projects like e-commerce solutions .
-                <br />
-                ▣ These project not only showcases my technical proficiency in web development but also demonstrates my commitment to creating innovative solutions that empower users to bring their ideas to life on the web.
+                <br />▣ These project not only showcases my technical
+                proficiency in web development but also demonstrates my
+                commitment to creating innovative solutions that empower users
+                to bring their ideas to life on the web.
               </Text>
             </Box>
           </Box>
