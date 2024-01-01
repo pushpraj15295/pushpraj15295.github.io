@@ -15,6 +15,7 @@ import Project from "./components/Project";
 import Social from "./components/Social";
 import SocialLinks from "./components/SocialLinks";
 import Experience from "./components/Experience";
+import AnimatedCursor from "./Loader/AnimatedCursor";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -101,6 +102,7 @@ function App() {
       </VStack>
       <br /> <br />
       <Footer />
+      <AnimatedCursor />
     </>
   );
 }
