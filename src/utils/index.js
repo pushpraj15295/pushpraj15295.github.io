@@ -17,7 +17,7 @@ import { SiFlutter } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
 import { IoLogoBitbucket } from "react-icons/io";
-
+import { TbBrandThreejs } from "react-icons/tb";
 export const CardData = [
   {
     id: 1,
@@ -149,8 +149,8 @@ export const skillsData = [
   },
   {
     id: 16,
-    iconName: SiFlutter,
-    titleName: "Flutter - currently learning...",
+    iconName: TbBrandThreejs,
+    titleName: "Threejs - currently learning...",
   },
 ];
 
