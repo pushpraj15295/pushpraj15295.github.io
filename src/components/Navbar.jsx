@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "@chakra-ui/icon";
 import { FaCode } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 import { Button } from "@chakra-ui/button";
@@ -71,7 +70,8 @@ const Navbar = ({
       justifyContent="space-around"
     >
       <Box cursor="pointer" onClick={() => handleClick(homeref.current)}>
-        <Icon as={FaCode} boxSize={isNotSmallerScreen ? "50" : "10"} />
+        {/* <Icon as={FaCode} boxSize={isNotSmallerScreen ? "50" : "10"} /> */}
+        <FaCode size={isNotSmallerScreen ? "50" : "10"} />
       </Box>
       <Flex
         width={isNotSmallerScreen ? "65%" : "85%"}

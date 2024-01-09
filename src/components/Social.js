@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "@chakra-ui/icon";
 import styles from "./social.module.css";
 import { GiSkills } from "react-icons/gi";
 import { skillsData, softSkills } from "../utils";
@@ -16,7 +15,7 @@ function Social() {
       <Box width="80%" margin="auto" alignItems="center">
         <Flex>
           <Box marginTop="12px">
-            <Icon as={GiSkills} boxSize={isNotSmallerScreen ? "46" : "10"} />
+            <GiSkills size={isNotSmallerScreen ? "46" : "10"} />
           </Box>
           &nbsp;&nbsp;&nbsp;
           <Box>
@@ -61,10 +60,7 @@ function Social() {
         <br /> <br /> <br />
         <Flex>
           <Box marginTop="12px">
-            <Icon
-              as={SiMicrosoftacademic}
-              boxSize={isNotSmallerScreen ? "46" : "10"}
-            />
+            <SiMicrosoftacademic size={isNotSmallerScreen ? "46" : "10"} />
           </Box>
           &nbsp;&nbsp;&nbsp;
           <Box>

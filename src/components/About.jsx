@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "@chakra-ui/icon";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { HiInformationCircle } from "react-icons/hi";
@@ -18,10 +17,7 @@ const About = () => {
       >
         <Flex>
           <Box marginTop={isNotSmallerScreen ? "18px" : "10px"}>
-            <Icon
-              as={HiInformationCircle}
-              boxSize={isNotSmallerScreen ? "60px" : "30px"}
-            />
+            <HiInformationCircle size={isNotSmallerScreen ? "60px" : "30px"} />
           </Box>
           &nbsp;&nbsp;
           <Box>

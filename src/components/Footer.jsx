@@ -1,14 +1,8 @@
 import React from "react";
-import { useTypewriter } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import { Box, Text, useMediaQuery } from "@chakra-ui/react";
 
 function Footer() {
-  const { text } = useTypewriter({
-    words: ["Thank You 🫂 Designed by Pushpraj from India"],
-    loop: 100,
-    onLoopDone: () => console.log(`loop completed after 3 runs.`),
-  });
-
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
     <Box
@@ -32,7 +26,15 @@ function Footer() {
           fontSize={isNotSmallerScreen ? "4xl" : "2xl"}
           bgGradient="linear(to-r, cyan.600, blue.500, purple.300)"
         >
-          {text}
+          <Typewriter
+            words={["Thank You 🫂 Designed by Pushpraj from India"]}
+            loop={50}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
         </Text>
       </Box>
     </Box>

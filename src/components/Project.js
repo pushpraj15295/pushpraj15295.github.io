@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "@chakra-ui/icon";
 import { CardData } from "../utils";
 import styles from "./social.module.css";
 import { FaGithub } from "react-icons/fa";
@@ -15,9 +14,8 @@ function Project() {
       <Box width={isNotSmallerScreen ? "80%" : "100%"} margin="auto">
         <Flex>
           <Box marginTop="14px">
-            <Icon
-              as={AiOutlineFundProjectionScreen}
-              boxSize={isNotSmallerScreen ? "46" : "10"}
+            <AiOutlineFundProjectionScreen
+              size={isNotSmallerScreen ? "46" : "10"}
             />
           </Box>
           &nbsp;&nbsp;&nbsp;
@@ -267,7 +265,7 @@ function Project() {
       <Box width="80%" margin="auto">
         <Flex>
           <Box marginTop="12px">
-            <Icon as={FaGithub} boxSize={isNotSmallerScreen ? "50" : "10"} />
+            <FaGithub size={isNotSmallerScreen ? "50" : "10"} />
           </Box>
           &nbsp;&nbsp;&nbsp;
           <Box>

@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "@chakra-ui/icon";
 import { FcWorkflow } from "react-icons/fc";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
@@ -18,10 +17,7 @@ const Experience = () => {
       >
         <Flex>
           <Box marginTop={isNotSmallerScreen ? "18px" : "10px"}>
-            <Icon
-              as={FcWorkflow}
-              boxSize={isNotSmallerScreen ? "60px" : "30px"}
-            />
+            <FcWorkflow size={isNotSmallerScreen ? "60px" : "30px"} />
           </Box>
           &nbsp;&nbsp;
           <Box>

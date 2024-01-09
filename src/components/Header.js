@@ -5,20 +5,13 @@ import { Button } from "@chakra-ui/button";
 import resume from "../Pushpraj_Patel_Resume.pdf";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { useMediaQuery } from "@chakra-ui/media-query";
-import { useTypewriter } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import { Stack, Circle, Flex, Box, Text } from "@chakra-ui/layout";
 
 function Header() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-
-  const { text } = useTypewriter({
-    words: isDark ? ["MERN Stack Developer"] : ["Full Stack Developer"],
-    loop: 100,
-    Cursor: "|",
-    onLoopDone: () => console.log(`loop completed after 3 runs.`),
-  });
 
   return (
     <Stack>
@@ -58,7 +51,17 @@ function Header() {
             bgClip="text"
             height={isNotSmallerScreen ? "50px" : "40px"}
           >
-            {text}
+            <Typewriter
+              words={
+                isDark ? ["MERN Stack Developer"] : ["Full Stack Developer"]
+              }
+              loop={50}
+              Cursor="|"
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
           </Text>
 
           <Box>
