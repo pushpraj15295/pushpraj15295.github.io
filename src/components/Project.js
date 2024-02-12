@@ -15,7 +15,7 @@ function Project() {
         <Flex>
           <Box marginTop="14px">
             <AiOutlineFundProjectionScreen
-              size={isNotSmallerScreen ? "46" : "10"}
+              size={isNotSmallerScreen ? "46" : "30"}
             />
           </Box>
           &nbsp;&nbsp;&nbsp;
@@ -59,7 +59,7 @@ function Project() {
                       ></iframe>
                     </div>
                   ) : (
-                    <Img src={el.imgSrc}></Img>
+                    <Img width={"100%"} src={el.imgSrc}></Img>
                   )}
                 </Box>
               </Box>
@@ -262,7 +262,7 @@ function Project() {
         </Box>
       </Box>
       <br />
-      <Box width="80%" margin="auto">
+      <Box width={isNotSmallerScreen ? "80%" : "100%"} margin="auto">
         <Flex>
           <Box marginTop="12px">
             <FaGithub size={isNotSmallerScreen ? "50" : "10"} />
@@ -299,7 +299,7 @@ function Project() {
             />
           </SimpleGrid>
           <br /> <br />
-          <Box width="100%" margin="auto" display="flex" placeContent="center">
+          <Box width={"100%"} margin="auto" display="flex" placeContent="center">
             <GitHubCalendar username="pushpraj15295" />
           </Box>
         </Box>

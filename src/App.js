@@ -84,7 +84,7 @@ function App() {
           <Social></Social>
         </Box>
         <br /> <br /> <br />
-        <Box ref={projectref}>
+        <Box  width={"100%"} ref={projectref}>
           {" "}
           <Project></Project>
         </Box>
